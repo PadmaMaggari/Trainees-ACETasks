@@ -1,0 +1,113 @@
+
+CREATE COMPUTE MODULE CreateMime_MF_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- -- Add recipient information to the EmailOutputHeader
+		-- SET OutputRoot.EmailOutputHeader.To = 'yashsureshraypure@eidiko-india.com';
+		-- SET OutputRoot.EmailOutputHeader.Cc = '';
+		-- SET OutputRoot.EmailOutputHeader.Bcc = '';
+		-- -- Add sender information to EmailOutputHeader
+		-- SET OutputRoot.EmailOutputHeader.From = 'yashsureshraypure@eidiko-india.com';
+		-- SET OutputRoot.EmailOutputHeader."Reply-To" = '';
+		-- -- Add subject to EmailOutputHeader
+		-- SET OutputRoot.EmailOutputHeader.Subject = 'Dynamic MIME message in ESQL.';
+		-- Create a new MIME message body, which will be sent as the main text of the email,
+		--  including an attachment.
+		
+		CREATE FIELD OutputRoot.MIME TYPE Name;
+		DECLARE M REFERENCE TO OutputRoot.MIME;
+	
+		
+		-- Create the Content-Type child of MIME explicitly to ensure the correct order. If we set
+		-- the ContentType property instead, the field could appear as the last child of MIME.
+		CREATE FIELD M."Content-Type" TYPE NameValue VALUE 'multipart/related; boundary=myBoundary';
+		CREATE FIELD M."Content-ID" TYPE NameValue VALUE 'new MIME document';
+
+		CREATE LASTCHILD OF M TYPE Name NAME 'Parts';
+		CREATE LASTCHILD OF M.Parts TYPE Name NAME 'Part';
+		DECLARE P1 REFERENCE TO M.Parts.Part;
+		-- First part:
+		-- Create the body of the email.
+		-- The body of the email has the text 'This is the main body of the email.'.
+		CREATE FIELD P1."Content-Type" TYPE NameValue VALUE 'text/html; charset=us-ascii';
+		CREATE FIELD P1."Content-Encoding" TYPE NameValue VALUE 'base64';
+		CREATE FIELD P1."Content-Disposition" TYPE NameValue VALUE 'inline';
+	   DECLARE htmlContent CHARACTER;
+       SET htmlContent = 
+        '<!DOCTYPE html>
+		<html>
+		<head>
+		<title>Student Technology Table</title>
+		<style>
+		table {
+		border-collapse: collapse;
+		width: 50%;
+		margin: 20px auto;
+		}
+		th, td {
+		border: 1px solid #444;
+		padding: 10px;
+		text-align: center;
+		}
+		th {
+		background-color: #0077b6;
+		color: white;
+		}
+		tr:nth-child(even) {
+		background-color: #e0f7fa;
+		}
+		</style>
+		</head>
+		<body>
+		<h2 style="text-align: center;">Student and Technology Table</h2>
+		<table>
+		<tr>
+		<th>Student Name</th>
+		<th>Technology</th>
+		</tr>
+		<tr>
+		<td>Yash</td>
+		<td>IIB, ACE</td>
+		</tr>
+		<tr>
+		<td>Adesh</td>
+		<td>IIB, ACE</td>
+		</tr>
+		<tr>
+		<td>Sakshi</td>
+		<td>IIB, ACE</td>
+		</tr>
+		<tr>
+		<td>Abhijeet</td>
+		<td>IIB, ACE and APIC </td>
+		</tr>
+		</table>
+		</body>
+		</html>';
+   
+     DECLARE htmlblob BLOB ;
+     SET htmlblob = CAST(htmlContent AS BLOB CCSID 1208);
+     DECLARE htmlbase64  CHARACTER BASE64ENCODE(htmlblob);
+	-- SET OutputRoot.JSON.Data.encoded = htmlbase64;
+	
+		CREATE LASTCHILD OF P1 TYPE Name NAME 'Data';
+		CREATE LASTCHILD OF P1.Data DOMAIN('BLOB') PARSE(CAST(htmlbase64 AS BLOB CCSID 1208));
+
+		CREATE LASTCHILD OF M.Parts TYPE Name NAME 'Part';
+		DECLARE P2 REFERENCE TO M.Parts.Part[2];
+		-- Create the attachment of an email.
+		-- The attachment is called 'attachment.txt' and contains the text 'This is an attachment.'.
+		CREATE FIELD P2."Content-Type" TYPE NameValue VALUE 'text/plain; charset=us-ascii; name=attachment.txt';
+		-- this line informs the email client not to display attachment inline
+		CREATE FIELD P2."Content-Dispostion" TYPE NameValue VALUE 'attachment; filename="attachment.txt"';
+		CREATE FIELD P2."Content-Transfer-Encoding" TYPE NameValue VALUE '8bit';
+		CREATE LASTCHILD OF P2 TYPE Name NAME 'Data';
+		CREATE LASTCHILD OF P2.Data DOMAIN('BLOB') PARSE(CAST('This is an attachment.' AS BLOB CCSID 1208));
+		
+		
+		-- Add SMTP server information to the LocalEnvironment
+		-- SET OutputLocalEnvironment.Destination.Email.SMTPServer = 'eidiko-india.com:587';
+		-- SET OutputLocalEnvironment.Destination.Email.SecurityIdentity = 'secGmailIdentity';
+		RETURN TRUE;
+	END;
+END MODULE;
