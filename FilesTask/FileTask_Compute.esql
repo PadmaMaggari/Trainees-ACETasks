@@ -1,0 +1,33 @@
+
+CREATE COMPUTE MODULE FileTask_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		CALL CopyEntireMessage();
+		RETURN FALSE;
+	END;
+
+
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		DECLARE inRef REFERENCE TO InputRoot.DFDL.input.record[>];
+		DECLARE j INTEGER 1;
+
+
+		WHILE LASTMOVE(inRef) DO
+			CREATE FIELD OutputRoot.JSON.Data.Employee IDENTITY(JSON.Array)Employee;
+			WHILE j < 6 AND LASTMOVE(inRef) DO
+				SET OutputRoot.JSON.Data.Employee.Item[j].ID = inRef.ID;
+				SET OutputRoot.JSON.Data.Employee.Item[j].Name = inRef.Name;
+				SET OutputRoot.JSON.Data.Employee.Item[j].Email = inRef.Email;
+				SET OutputRoot.JSON.Data.Employee.Item[j].Department = inRef.Department;
+				SET OutputRoot.JSON.Data.Employee.Item[j].Salary = inRef.Salary;
+				SET j = j+ 1;
+				INSERT INTO Database.employees (id,name,email,department,salary ) VALUES (inRef.ID,inRef.Name,inRef.Email,inRef.Department,inRef.Salary);
+				MOVE inRef NEXTSIBLING;
+			END WHILE;
+				PROPAGATE TO TERMINAL 'out';
+				SET j = 1;	
+		END WHILE;
+
+	END;
+END MODULE;
