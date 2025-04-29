@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_Aggregation_Backendproject.generated.bar" deployTimestamp="2025-04-29 04:44:37">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="MF1_Backend" deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_Aggregation_Backendproject.generated.bar" deployTimestamp="2025-04-29 04:44:37">
+    <ConfigurableProperty uri="MF1_Backend#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.URLSpecifier" override="/path1">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF1_Backend#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+  <CompiledMessageFlow name="MF3_Backend" deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_Aggregation_Backendproject.generated.bar" deployTimestamp="2025-04-29 04:44:37">
+    <ConfigurableProperty uri="MF3_Backend#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.URLSpecifier" override="/path3">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF3_Backend#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+  <CompiledMessageFlow name="MF2_Backend" deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_Aggregation_Backendproject.generated.bar" deployTimestamp="2025-04-29 04:44:37">
+    <ConfigurableProperty uri="MF2_Backend#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.URLSpecifier" override="/path2">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF2_Backend#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

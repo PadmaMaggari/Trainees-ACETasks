@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Broker deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_AggregationNodesproject.generated.bar" deployTimestamp="2025-04-29 05:08:16">
+  <CompiledApplication>
+    <ConfigurableProperty uri="startMode">
+    </ConfigurableProperty>
+  </CompiledApplication>
+  <CompiledMessageFlow name="MF_AggregationNodes" deployBarfile="C:\Users\syste\Desktop\Sakshi_newwork\Sample_Task\GeneratedBarFiles\APP_AggregationNodesproject.generated.bar" deployTimestamp="2025-04-29 05:08:16">
+    <ConfigurableProperty uri="MF_AggregationNodes#Aggregate Control.aggregateName" override="aggregateGroup">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Aggregate Reply.aggregateName" override="aggregateGroup">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute1.connectDatasourceBeforeFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute1.dataSource">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#Compute1.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.AddRequestToGroup">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.GroupRequestFolderName" override="myData">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.GroupRequestTimeout">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.URLSpecifier" override="http://localhost:7800/default">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.acceptCompressedResponses">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.allowedCiphers">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.asyncResponseCorrelator" override="secid">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.enableCRLCheck">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.hostnameChecking">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.httpProxyLocation">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.keyAlias">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.policyUrl">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.protocol">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.requestCompressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Request.timeoutForServer">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Response.asyncRequestCorrelator" override="secid">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Async Response.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.URLSpecifier" override="/path">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.decompressInputMessage">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.faultFormat">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.timeoutForClient">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.useHTTPS">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Input.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Reply.compressionType">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#HTTP Reply.validateMaster">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#additionalInstances">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#commitCount">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#commitInterval">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#consumerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#consumerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#coordinatedTransaction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#maximumRateMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#monitoringProfile">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#notificationThresholdMsgsPerSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#processingTimeoutAction">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#processingTimeoutSec">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#providerPolicySet">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#providerPolicySetBindings">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#securityProfileName">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#startInstancesWhenFlowStarts">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#startMode">
+    </ConfigurableProperty>
+    <ConfigurableProperty uri="MF_AggregationNodes#wlmPolicy">
+    </ConfigurableProperty>
+  </CompiledMessageFlow>
+</Broker>

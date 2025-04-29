@@ -1,0 +1,37 @@
+
+
+CREATE COMPUTE MODULE MF_AggregationNodes_Compute2
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		-- CALL CopyMessageHeaders();
+		 CALL CopyEntireMessage();
+		RETURN FALSE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		-- Clean OutputLocalEnvironment first
+SET OutputLocalEnvironment.Destination.HTTP = NULL;
+
+-- First backend service (UserService)
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestIdentifier = 'UserService';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestURL = 'http://localhost:7800/path1';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestHeader."Content-Type" = InputRoot.HTTPResponseHeader."Content-Type";
+
+propagate to terminal 'out';
+
+-- Second backend service (OrderService)
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestIdentifier = 'OrderService';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestURL = 'http://localhost:7800/path2';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestHeader."Content-Type" = InputRoot.HTTPResponseHeader."Content-Type";
+
+propagate to terminal 'out';
+
+-- Third backend service (PaymentService)
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestIdentifier = 'PaymentService';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestURL = 'http://localhost:7800/path3';
+SET OutputLocalEnvironment.Destination.HTTP.Request.RequestHeader."Content-Type" = InputRoot.HTTPResponseHeader."Content-Type";
+
+propagate to terminal 'out';
+
+	END;
+END MODULE;

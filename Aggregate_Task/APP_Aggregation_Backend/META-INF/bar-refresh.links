@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0" overrideConfigurableProperties="false" includeESQL="false">
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF1_Backend.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF1_Backend.msgflow.&#xA;Successfully added file APP_Aggregation_Backend\MF1_Backend.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF1_Backend.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF1_Backend_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF1_Backend_Compute.esql.&#xA;Successfully added file APP_Aggregation_Backend\MF1_Backend_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF1_Backend_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF2_Backend.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF2_Backend.msgflow.&#xA;Successfully added file APP_Aggregation_Backend\MF2_Backend.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF2_Backend.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF2_Backend_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF2_Backend_Compute.esql.&#xA;Successfully added file APP_Aggregation_Backend\MF2_Backend_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF2_Backend_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF3_Backend.msgflow">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF3_Backend.msgflow.&#xA;Successfully added file APP_Aggregation_Backend\MF3_Backend.msgflow to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF3_Backend.msgflow"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/MF3_Backend_Compute.esql">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\MF3_Backend_Compute.esql.&#xA;Successfully added file APP_Aggregation_Backend\MF3_Backend_Compute.esql to BAR file.&#xA;" severity="0"/>
+      <barEntry name="MF3_Backend_Compute.esql"/>
+    </deployable>
+    <deployable deployed="true" barResourceTimeStamp="1745867238000" workspaceResource="/APP_Aggregation_Backend/application.descriptor">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Processing file APP_Aggregation_Backend\application.descriptor.&#xA;Successfully added file APP_Aggregation_Backend\application.descriptor to BAR file.&#xA;Elapsed time: 0 second(s).&#xA;&#xA;Successfully added file APP_Aggregation_Backend\application.descriptor to BAR file.&#xA;" severity="0"/>
+      <barEntry name="application.descriptor"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>
